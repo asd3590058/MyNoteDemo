@@ -1,4 +1,4 @@
-package com.example.mydemo;
+package com.example.view;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -9,6 +9,9 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.example.mydemo.DimenUtil;
+import com.example.mydemo.R;
 
 import androidx.core.content.ContextCompat;
 
@@ -41,7 +44,7 @@ public class CustomView extends View {
 
 	public CustomView(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
-		TypedArray typedArray=context.obtainStyledAttributes(attrs,R.styleable.CustomCircleProgressBar);
+		TypedArray typedArray=context.obtainStyledAttributes(attrs, R.styleable.CustomCircleProgressBar);
 		outsideColor=typedArray.getColor(R.styleable.CustomCircleProgressBar_outside_color,
 				ContextCompat.getColor(getContext(), R.color.colorPrimary));
 		outsideRadius= typedArray.getDimension(R.styleable.CustomCircleProgressBar_outside_radius,

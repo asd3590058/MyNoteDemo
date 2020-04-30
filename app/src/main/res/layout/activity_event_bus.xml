@@ -9,7 +9,7 @@
     android:gravity="center"
     tools:context="com.example.mydemo.com.example.activity.EventBusActivity">
 
-    <com.example.mydemo.CustomView
+    <com.example.view.CustomView
         android:layout_gravity="center"
         android:id="@+id/custom_view"
         android:layout_width="wrap_content"
