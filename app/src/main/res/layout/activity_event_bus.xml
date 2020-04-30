@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.mydemo.com.example.activity.EventBusActivity">
+
+    <com.example.mydemo.CustomView
+        android:layout_gravity="center"
+        android:id="@+id/custom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:max_progress="100"
+        app:outside_color="@color/colorPrimary"
+        app:outside_radius="40dp"
+        app:progress="0"
+        app:progress_width="1dp" />
+
+</LinearLayout>
