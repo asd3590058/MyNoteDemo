@@ -1,14 +1,19 @@
-apply plugin: 'com.android.application'
+plugins {
+    alias libs.plugins.android.application
+    alias libs.plugins.kotlin
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
+}
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdk libs.versions.compiledSdk.get().toInteger()
     defaultConfig {
-        applicationId "com.example.mydemo"
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-        maxSdkVersion 28
+        applicationId libs.versions.applicationId.get()
+        minSdk libs.versions.minSdk.get().toInteger()
+        targetSdk libs.versions.targetSdk.get().toInteger()
+        versionCode libs.versions.versionCode.get().toInteger()
+        versionName libs.versions.versionName.get()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -20,16 +25,77 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs += [
+                "-Xopt-in=kotlin.RequiresOptIn"
+        ]
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
-    implementation 'com.apkfuns.logutils:library:1.7.5'
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
-    implementation 'com.jakewharton:butterknife:10.2.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    //region androidx ASCII排序
+    implementation libs.appcompat
+    implementation libs.biometric
+    implementation libs.constraintlayout
+    implementation libs.core
+    implementation libs.fragment
+    implementation libs.material
+    //endregion
+
+    //region jetpack组依赖
+    implementation libs.hiltAndroid
+    kapt libs.hiltCompiler
+    implementation libs.hiltWork
+    kapt libs.hiltWorkComplier
+    implementation libs.bundles.lifecycle
+    implementation libs.bundles.navigation
+    implementation libs.bundles.work
+    implementation libs.room
+    kapt libs.roomCompiler
+    implementation libs.roomKtx
+    implementation libs.startup
+    implementation libs.page
+    //endregion
+
+    //region MoShi适配器
+    implementation libs.moshi
+    kapt libs.moshiCodegen
+    //endregion
+
+    //region 三方依赖库
+    implementation libs.banner
+    implementation libs.bundles.cameras
+    implementation libs.bundles.picture
+    implementation libs.bundles.pop
+    implementation libs.brvah
+    implementation libs.calendar
+    implementation libs.commonLang
+    implementation libs.glide
+    implementation libs.glideOkhttp
+    kapt libs.glideCompiler
+    debugImplementation libs.leakCanary
+    implementation libs.liveEventBus
+    implementation libs.mmkv
+    implementation libs.permissionx
+    implementation libs.toastUtils
+    implementation libs.tbssdk
+    implementation libs.unpeekLivedata
+    implementation libs.videoCompress
+    //endregion
+
+    //region 网络请求框架 协程框架
+    implementation libs.bundles.coroutines
+    implementation libs.bundles.retrofit
+    //endregion
+
+    //region 测试依赖
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation libs.junit
+    androidTestImplementation libs.espresso
+    //endregion
 }
