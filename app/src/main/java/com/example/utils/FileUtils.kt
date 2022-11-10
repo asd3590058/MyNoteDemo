@@ -21,7 +21,7 @@ import java.security.MessageDigest
  *@author https://github.com/asd3590058
  *@fileName FileUtils
  *@date 2022/3/8 15:04
- *@description
+ *@description 文件工具类
  */
 object FileUtils {
 
