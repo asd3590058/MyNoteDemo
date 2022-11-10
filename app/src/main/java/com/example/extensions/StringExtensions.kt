@@ -10,7 +10,7 @@ import java.text.NumberFormat
 import java.text.ParseException
 
 /**
- *@package com.sinosig.khapp.extensions
+ *@package com.example.extensions
  *@author https://github.com/asd3590058
  *@fileName StringExtrnsions
  *@date 2022/4/13 14:01

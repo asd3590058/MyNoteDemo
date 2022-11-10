@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 /**
- *@package com.sinosig.khapp.common.extensions
+ *@package com.example.extensions
  *@author https://github.com/asd3590058
  *@fileName DataExtensions
  *@date 2022/2/21 17:34

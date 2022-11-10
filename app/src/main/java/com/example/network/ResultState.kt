@@ -2,7 +2,7 @@ package com.example.network
 
 
 /**
- *@package com.sinosig.khapp.base
+ *@package com.example.network
  *@author https://github.com/asd3590058
  *@fileName BaseResultState
  *@date 2022/9/13 15:05

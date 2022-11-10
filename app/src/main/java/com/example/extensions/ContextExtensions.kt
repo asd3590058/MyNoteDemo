@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsControllerCompat
 
 
 /**
- *@package com.sinosig.khapp.common.extensions
+ *@package com.example.extensions
  *@author https://github.com/asd3590058
  *@fileName 页面点击跳转工具 刨除一些原生逻辑，主要做原生跳转H5拦截
  *@date 2022/2/18 15:44

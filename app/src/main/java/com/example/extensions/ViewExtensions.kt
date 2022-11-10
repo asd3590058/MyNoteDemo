@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.view.ViewGroup.MarginLayoutParams
 
 /**
- *@package com.sinosig.khapp.common.extensions
+ *@package com.example.extensions
  *@author https://github.com/asd3590058
  *@fileName ViewExtensions
  *@date 2022/1/12 15:10 view扩展函数

@@ -7,7 +7,7 @@ import android.text.style.ReplacementSpan
 import kotlin.math.roundToInt
 
 /**
- *@package com.sinosig.khapp.widget
+ *@package com.example.view
  *@author https://github.com/asd3590058
  *@fileName ImageSpan
  *@date 2022/10/14 13:57

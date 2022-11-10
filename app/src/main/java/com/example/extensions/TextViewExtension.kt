@@ -21,7 +21,7 @@ import com.example.BaseApplication
 import com.example.view.TextBackgroundSpan
 
 /**
- *@package com.sinosig.khapp.extensions
+ *@package com.example.extensions
  *@author https://github.com/asd3590058
  *@fileName TextView扩展函数
  *@date 2022/9/7 14:28

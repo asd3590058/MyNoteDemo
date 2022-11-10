@@ -8,7 +8,7 @@ import androidx.core.graphics.drawable.DrawableCompat
 import com.example.mydemo.R
 
 /**
- *@package com.sinosig.khapp.extensions
+ *@package com.example.extensions
  *@author https://github.com/asd3590058
  *@fileName ImageView扩展函数
  *@date 2022/9/7 14:46
